@@ -8,9 +8,9 @@ from pydeseq2.dds import DeseqDataSet
 from pydeseq2.ds import DeseqStats
 from pydeseq2.default_inference import DefaultInference
 
-from server.modules.validators import safe_filename
-from server.modules.gene_mapper import map_genes
-from server.modules.plots import plot_volcano, plot_pca
+from modules.validators import safe_filename
+from modules.gene_mapper import map_genes
+from modules.plots import plot_volcano, plot_pca
 
 async def run_deseq2_microservice(
     counts_df,
