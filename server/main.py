@@ -2,10 +2,10 @@ import asyncio
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from server.middlewares.exception_handlers import catch_exception_middeware
+from middlewares.exception_handlers import catch_exception_middeware
 
 async def initialize_deseq2_service():
-    from server.routes.run_deseq2 import router as run_deseq2
+    from routes.run_deseq2 import router as run_deseq2
 
     app.include_router(run_deseq2)
 
