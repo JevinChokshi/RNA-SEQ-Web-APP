@@ -240,7 +240,7 @@ def render_deseq2_ui():
 
                             # 3a. Differentially Expressed Genes
                             deg_dict = data.get(
-                                "deg_csvs",
+                                "mapped_csvs",
                                 {}
                             )
 
@@ -255,6 +255,11 @@ def render_deseq2_ui():
                                     df = pd.read_csv(
                                         StringIO(csv_content)
                                     )
+                                    
+                                    df = df[
+                                        (df['padj'] < p_adj) &
+                                        (abs(df['log2FoldChange']) > log2fc)
+                                    ].copy()
 
                                     st.markdown(
                                         f"**Data Preview:** `{fname}` "
