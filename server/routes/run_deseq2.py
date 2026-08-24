@@ -1,5 +1,5 @@
-from server.modules.deseq2_runner import run_deseq2_microservice
-from server.modules.load_dataset import load_and_process_data
+from modules.deseq2_runner import run_deseq2_microservice
+from modules.load_dataset import load_and_process_data
 # 1. Import Form from fastapi
 from fastapi import APIRouter, UploadFile, Form 
 from fastapi.responses import JSONResponse
