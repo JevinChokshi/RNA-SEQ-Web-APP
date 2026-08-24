@@ -1,0 +1,1 @@
+server/data/Human.GRCh38.p13.annot.tsv filter=lfs diff=lfs merge=lfs -text
