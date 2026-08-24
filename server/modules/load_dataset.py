@@ -1,7 +1,7 @@
 import io
 import pandas as pd
 from dotenv import load_dotenv
-from server.modules.validators import validate_dataframe_not_empty, validate_required_columns, validate_numeric_counts, validate_sample_overlap
+from modules.validators import validate_dataframe_not_empty, validate_required_columns, validate_numeric_counts, validate_sample_overlap
 from fastapi import UploadFile
 
 load_dotenv()
